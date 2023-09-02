@@ -19,5 +19,14 @@ Demonstrar habilidades de programação orientada a objetos na prática desenvol
     <span>Deploy com Railway</span>
 </h3>
 
-```yaml
+```shell
+SPRING_PROFILES_ACTIVE=
+POSTGRES_JDBC_URL=
+POSTGRES_USERNAME=
+POSTGRES_PASSWORD=
+REDIS_HOST=
+REDIS_PORT=
+REDIS_USERNAME=
+REDIS_PASSWORD=
+JWT_SECRET=
 ```
