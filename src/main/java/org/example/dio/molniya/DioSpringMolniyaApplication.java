@@ -25,12 +25,14 @@ public class DioSpringMolniyaApplication {
 	@Bean
 	public CommandLineRunner migrateDefaultUsers(UsuarioRepository repository) {
 		return (args) -> {
-			Usuario admin = new Usuario();
-			admin.setNome("Thanos");
-			admin.setUsuario("admin");
-			admin.setSenha("dio123");
-			admin.setQuota(1000000L);
-			repository.save(admin);
+			if(!repository.existsByUsuario("admin")) {
+				Usuario admin = new Usuario();
+				admin.setNome("Thanos");
+				admin.setUsuario("admin");
+				admin.setSenha("dio123");
+				admin.setQuota(1000000L);
+				repository.save(admin);
+			}
 		};
 	}
 }
